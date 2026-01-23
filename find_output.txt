@@ -1,0 +1,21 @@
+﻿Searching for IPv4 endpoint for project bqyujhcttkvulrnmhmxn...
+------------------------------------------------------------
+Checking eu-central-1 (aws-0-eu-central-1.pooler.supabase.com -> 18.198.145.223)...
+[FAILED] eu-central-1: connection failed: connection to server at "52.59.152.35", port 6543 failed: FATAL:  Tenant or user not found
+Multiple connection attempts failed. All failures were:
+- host: 'aws-0-eu-central-1.pooler.supabase.com', port: '6543', hostaddr: '18.198.145.223': connection failed: connection to server at "18.198.145.223", port 6543 failed: FATAL:  Tenant or user not found
+- host: 'aws-0-eu-central-1.pooler.supabase.com', port: '6543', hostaddr: '18.198.30.239': connection failed: connection to server at "18.198.30.239", port 6543 failed: FATAL:  Tenant or user not found
+- host: 'aws-0-eu-central-1.pooler.supabase.com', port: '6543', hostaddr: '52.59.152.35': connection failed: connection to server at "52.59.152.35", port 6543 failed: FATAL:  Tenant or user not found
+Checking eu-west-1 (aws-0-eu-west-1.pooler.supabase.com -> 108.128.216.176)...
+[FAILED] eu-west-1: connection failed: connection to server at "52.209.89.87", port 6543 failed: FATAL:  Tenant or user not found
+Multiple connection attempts failed. All failures were:
+- host: 'aws-0-eu-west-1.pooler.supabase.com', port: '6543', hostaddr: '108.128.216.176': connection failed: connection to server at "108.128.216.176", port 6543 failed: FATAL:  Tenant or user not found
+- host: 'aws-0-eu-west-1.pooler.supabase.com', port: '6543', hostaddr: '52.209.89.87': connection failed: connection to server at "52.209.89.87", port 6543 failed: FATAL:  Tenant or user not found
+Checking us-east-1 (aws-0-us-east-1.pooler.supabase.com -> 52.45.94.125)...
+[FAILED] us-east-1: connection failed: connection to server at "44.208.221.186", port 6543 failed: FATAL:  Tenant or user not found
+Multiple connection attempts failed. All failures were:
+- host: 'aws-0-us-east-1.pooler.supabase.com', port: '6543', hostaddr: '52.45.94.125': connection failed: connection to server at "52.45.94.125", port 6543 failed: FATAL:  Tenant or user not found
+- host: 'aws-0-us-east-1.pooler.supabase.com', port: '6543', hostaddr: '44.216.29.125': connection failed: connection to server at "44.216.29.125", port 6543 failed: FATAL:  Tenant or user not found
+- host: 'aws-0-us-east-1.pooler.supabase.com', port: '6543', hostaddr: '44.208.221.186': connection failed: connection to server at "44.208.221.186", port 6543 failed: FATAL:  Tenant or user not found
+------------------------------------------------------------
+Could not find a working endpoint. Please check your password or project status.

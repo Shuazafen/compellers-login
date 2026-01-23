@@ -1,0 +1,420 @@
+﻿..\env\bin\python.exe
+ : Traceback (most 
+recent call last):
+At line:1 char:1
++ ..\env\bin\python.e
+xe manage.py 
+showmigrations 2>&1 
+| Out-File -FileP ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Traceba   
+ ck (most recent     
+call last)::Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+279, in 
+ensure_connection
+    self.connect()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+256, in connect
+    self.connection 
+= self.get_new_connec
+tion(conn_params)
+                     
+ ^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\pos
+tgresql\base.py", 
+line 333, in 
+get_new_connection
+    connection = self
+.Database.connect(**c
+onn_params)
+                 ^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\p
+sycopg\connection.py"
+, line 129, in 
+connect
+    raise type(last_e
+x)("\n".join(lines)).
+with_traceback(None)
+psycopg.OperationalEr
+ror: connection 
+failed: connection 
+to server at 
+"52.209.89.87", port 
+6543 failed: FATAL:  
+Tenant or user not 
+found
+Multiple connection 
+attempts failed. All 
+failures were:
+- host: 'aws-0-eu-wes
+t-1.pooler.supabase.c
+om', port: '6543', 
+hostaddr: 
+'108.128.216.176': 
+connection failed: 
+connection to server 
+at 
+"108.128.216.176", 
+port 6543 failed: 
+FATAL:  Tenant or 
+user not found
+- host: 'aws-0-eu-wes
+t-1.pooler.supabase.c
+om', port: '6543', 
+hostaddr: 
+'52.209.89.87': 
+connection failed: 
+connection to server 
+at "52.209.89.87", 
+port 6543 failed: 
+FATAL:  Tenant or 
+user not found
+
+The above exception 
+was the direct cause 
+of the following 
+exception:
+
+Traceback (most 
+recent call last):
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\cwpai\manage.
+py", line 28, in 
+<module>
+    main()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\cwpai\manage.
+py", line 24, in main
+    execute_from_comm
+and_line(sys.argv)
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\__init__.py", line 
+443, in execute_from_
+command_line
+    utility.execute()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\__init__.py", line 
+437, in execute
+    self.fetch_comman
+d(subcommand).run_fro
+m_argv(self.argv)
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\base.py", line 420, 
+in run_from_argv
+    
+self.execute(*args, 
+**cmd_options)
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\base.py", line 464, 
+in execute
+    output = 
+self.handle(*args, 
+**options)
+             ^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\commands\showmigrati
+ons.py", line 67, in 
+handle
+    return self.show_
+list(connection, 
+options["app_label"])
+           ^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\core\management
+\commands\showmigrati
+ons.py", line 86, in 
+show_list
+    loader = Migratio
+nLoader(connection, i
+gnore_no_migrations=T
+rue)
+             ^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\migrations\l
+oader.py", line 59, 
+in __init__
+    
+self.build_graph()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\migrations\l
+oader.py", line 288, 
+in build_graph
+    self.applied_migr
+ations = recorder.app
+lied_migrations()
+                     
+         ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\migrations\r
+ecorder.py", line 
+89, in 
+applied_migrations
+    if 
+self.has_table():
+       
+^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\migrations\r
+ecorder.py", line 
+63, in has_table
+    with self.connect
+ion.cursor() as 
+cursor:
+         ^^^^^^^^^^^^
+^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+320, in cursor
+    return 
+self._cursor()
+           
+^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+296, in _cursor
+    self.ensure_conne
+ction()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+278, in 
+ensure_connection
+    with self.wrap_da
+tabase_errors:
+         ^^^^^^^^^^^^
+^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\utils.py", 
+line 94, in __exit__
+    raise dj_exc_valu
+e.with_traceback(trac
+eback) from exc_value
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+279, in 
+ensure_connection
+    self.connect()
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\bas
+e\base.py", line 
+256, in connect
+    self.connection 
+= self.get_new_connec
+tion(conn_params)
+                     
+ ^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\utils\asyncio.p
+y", line 26, in inner
+    return 
+func(*args, **kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\d
+jango\db\backends\pos
+tgresql\base.py", 
+line 333, in 
+get_new_connection
+    connection = self
+.Database.connect(**c
+onn_params)
+                 ^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+  File "C:\Users\User
+\work_projects\CWPAI_
+backend\env\lib\pytho
+n3.12\site-packages\p
+sycopg\connection.py"
+, line 129, in 
+connect
+    raise type(last_e
+x)("\n".join(lines)).
+with_traceback(None)
+django.db.utils.Opera
+tionalError: 
+connection failed: 
+connection to server 
+at "52.209.89.87", 
+port 6543 failed: 
+FATAL:  Tenant or 
+user not found
+Multiple connection 
+attempts failed. All 
+failures were:
+- host: 'aws-0-eu-wes
+t-1.pooler.supabase.c
+om', port: '6543', 
+hostaddr: 
+'108.128.216.176': 
+connection failed: 
+connection to server 
+at 
+"108.128.216.176", 
+port 6543 failed: 
+FATAL:  Tenant or 
+user not found
+- host: 'aws-0-eu-wes
+t-1.pooler.supabase.c
+om', port: '6543', 
+hostaddr: 
+'52.209.89.87': 
+connection failed: 
+connection to server 
+at "52.209.89.87", 
+port 6543 failed: 
+FATAL:  Tenant or 
+user not found
