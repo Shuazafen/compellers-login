@@ -20,11 +20,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Add PostgreSQL DLL directory on Windows for psycopg
-if os.name == 'nt':
-    pg_bin = r"C:\Program Files\PostgreSQL\18\bin"
-    if os.path.exists(pg_bin):
-        os.add_dll_directory(pg_bin)
-        os.environ["PATH"] = pg_bin + os.pathsep + os.environ["PATH"]
+# if os.name == 'nt':
+#     pg_bin = r"C:\Program Files\PostgreSQL\18\bin"
+#     if os.path.exists(pg_bin):
+#         os.add_dll_directory(pg_bin)
+#         os.environ["PATH"] = pg_bin + os.pathsep + os.environ["PATH"]
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -97,25 +97,10 @@ WSGI_APPLICATION = 'cwpai.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-import dj_database_url
-
-# settings.py
-import socket
-
-
-# Then your database config
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'postgres'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', '1986@olA12=1'),
-        'HOST': os.getenv('DB_HOST', 'aws-0-eu-west-1.pooler.supabase.com'),
-        'PORT': os.getenv('DB_PORT', '6543'),
-        'OPTIONS': {
-            'connect_timeout': 10,
-            'sslmode': 'require',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 # Password validation
