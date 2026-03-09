@@ -105,3 +105,54 @@ def profile(request):
     """
     serializer = UserSerializer(request.user)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def enroll_product_management(request):
+    """
+    Enroll a user in product management.
+    
+    POST /api/enroll/product-management/
+    Body: {
+        "full_name": "string",
+        "email_address": "string",
+        "phone_number": "string" (optional)
+    }
+    """
+    from .serializers import ProductManagementEnrollmentSerializer
+    serializer = ProductManagementEnrollmentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response({
+            'message': 'Enrollment successful',
+            'data': serializer.data
+        }, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def submit_project_building(request):
+    """
+    Submit a project building request.
+    
+    POST /api/project-building/
+    Body: {
+        "full_name": "string",
+        "email_address": "string",
+        "company": "string" (optional),
+        "budget_range": "string" (optional),
+        "service": "string" (optional),
+        "project_description": "string" (optional)
+    }
+    """
+    from .serializers import ProjectBuildingSerializer
+    serializer = ProjectBuildingSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response({
+            'message': 'Project building request submitted successfully',
+            'data': serializer.data
+        }, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

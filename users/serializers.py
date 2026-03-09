@@ -48,3 +48,23 @@ class LoginSerializer(serializers.Serializer):
     """Serializer for user login"""
     username = serializers.CharField()
     password = serializers.CharField(write_only=True)
+
+
+class ProductManagementEnrollmentSerializer(serializers.ModelSerializer):
+    """Serializer for product management enrollment"""
+    
+    class Meta:
+        from .models import ProductManagementEnrollment
+        model = ProductManagementEnrollment
+        fields = ['id', 'full_name', 'email_address', 'phone_number', 'created_at']
+        read_only_fields = ['id', 'created_at']
+
+
+class ProjectBuildingSerializer(serializers.ModelSerializer):
+    """Serializer for project building"""
+    
+    class Meta:
+        from .models import ProjectBuilding
+        model = ProjectBuilding
+        fields = ['id', 'full_name', 'email_address', 'company', 'budget_range', 'service', 'project_description', 'created_at']
+        read_only_fields = ['id', 'created_at']
